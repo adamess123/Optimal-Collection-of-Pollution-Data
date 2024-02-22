@@ -186,39 +186,11 @@ vector<Sensor> randomApproach(vector<Sensor> X, int L) {
   int W = 0;
   vector<Sensor> result = randomGen(X, L, W);
   return result;
-  /*cout << "Our budget is: " << L << endl;
-  cout << "We havector<Sensor> X = clusterDistro();
-  cout << "Optimal solution: " << endl;
-  optimalApproach(X, L, numIters, subsetSize);
-
-  cout << "Pure greedy solution: " << endl;
-  pureGreedy(X, L);
-
-  cout << "Random solution: " << endl;
-  randomApproach(X, L);ve purchased " << result.size() << " random sensors" <<
-  endl; cout << "Total weight is: " << W << endl; cout << "\n"; for (int i = 0;
-  i < result.size(); i++) { cout << "X coordinate: " << result[i].x << endl;
-    cout << "Y coordinate: " << result[i].y << endl;
-    cout << "Weight: " << result[i].wt << endl;
-    cout << "Cost: " << result[i].ct << endl;
-    cout << "\n";
-  }*/
 }
 vector<Sensor> pureGreedy(vector<Sensor> X, int L) {
   int W = 0;
   vector<Sensor> result = search(W, X, L);
   return result;
-  /*cout << "Our budget is: " << L << endl;
-  cout << "We have purchased " << result.size() << " greedy sensors" << endl;
-  cout << "Total weight is: " << W << endl;
-  cout << "\n";
-  for (int i = 0; i < result.size(); i++) {
-    cout << "X coordinate: " << result[i].x << endl;
-    cout << "Y coordinate: " << result[i].y << endl;
-    cout << "Weight: " << result[i].wt << endl;
-    cout << "Cost: " << result[i].ct << endl;
-    cout << "\n";
-  }*/
 }
 vector<Sensor> optimalApproach(vector<Sensor> X, int L, int numIters,
                                int subsetSize) {
@@ -241,18 +213,6 @@ vector<Sensor> optimalApproach(vector<Sensor> X, int L, int numIters,
     sub.clear();
   }
   return res;
-  /*cout << "Our budget is: " << L << endl;
-  cout << "Our sample size is: " << subsetSize << endl;
-  cout << "We have purchased " << res.size() << " viable sensors" << endl;
-  cout << "Total weight is: " << W << endl;
-  cout << "\n";
-  for (int i = 0; i < res.size(); i++) {
-    cout << "X coordinate: " << res[i].x << endl;
-    cout << "Y coordinate: " << res[i].y << endl;
-    cout << "Weight: " << res[i].wt << endl;
-    cout << "Cost: " << res[i].ct << endl;
-    cout << "\n";
-  }*/
 }
 int compute_weight(vector<Sensor> sensors) {
   int weights = 0;
